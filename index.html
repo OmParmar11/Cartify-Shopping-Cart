@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartify — Everyday Goods, Better</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a class="logo" href="#">cartify<span>.</span></a>
+        <nav>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#perks">Why Us</a>
+        </nav>
+        <button class="cart-button" id="open-cart">Bag <span id="cart-count">0</span></button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">✦ TCET MERCH DROP — 2026</p>
+                <h1>Campus classics.<br><span class="gradient-text">Made to belong.</span></h1>
+                <p class="hero-text">Your TCET identity, off the timetable. Limited-run hoodies, tees and jackets made for your everyday campus rotation.</p>
+                <div class="hero-actions">
+                    <a class="primary-button" href="#shop">Shop the drop <span>↗</span></a>
+                    <div class="hero-stats">
+                        <div><strong>4.9★</strong><span>Rated Store</span></div>
+                        <div class="stat-divider"></div>
+                        <div><strong>24h</strong><span>Fast Dispatch</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-art">
+                <div class="hero-sticker">BEST<br>SELLER<br>LIMITED ✳</div>
+                <img src="assets/products/tcet-cream-hoodie-front-back.jpg" alt="Limited-edition cream TCET hoodie, front and back view">
+                <div class="hero-tag">
+                    <span>TCET SIGNATURE HOODIE / NO. 01</span>
+                    <span class="tag-badge">BESTSELLER · LIMITED</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- REPLACED GLITCHY RED TICKER WITH INTERACTIVE FEATURE STRIP -->
+        <section class="feature-strip" id="perks" aria-label="Store highlights">
+            <div class="feature-pill">
+                <span class="feature-icon">⚡</span>
+                <div>
+                    <strong>Express Delivery</strong>
+                    <p>Dispatched within 24 hours</p>
+                </div>
+            </div>
+            <div class="feature-pill">
+                <span class="feature-icon">✦</span>
+                <div>
+                    <strong>Small-Batch Quality</strong>
+                    <p>Heavyweight & built to last</p>
+                </div>
+            </div>
+            <div class="feature-pill">
+                <span class="feature-icon">↺</span>
+                <div>
+                    <strong>7-Day Easy Swap</strong>
+                    <p>Zero-hassle instant exchanges</p>
+                </div>
+            </div>
+            <div class="feature-pill">
+                <span class="feature-icon">🛡</span>
+                <div>
+                    <strong>Student Verified</strong>
+                    <p>Java Full-Stack Project Demo</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="shop-section" id="shop">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">TCET CAMPUS MERCH · LIMITED DROP</p>
+                    <h2>Wear your <em>college pride.</em></h2>
+                </div>
+                <p class="section-side-note">Hoodies, tees and jackets<br>for the TCET batch.</p>
+            </div>
+            <div class="category-row" id="category-filters">
+                <button class="filter active" data-category="All">All merch</button>
+                <button class="filter" data-category="Hoodies">Hoodies</button>
+                <button class="filter" data-category="Jackets">Jackets</button>
+                <button class="filter" data-category="T-shirts">T-shirts</button>
+            </div>
+            <div class="product-grid" id="product-grid">
+                <p class="loading-message">Loading the collection...</p>
+            </div>
+        </section>
+
+        <section class="brand-note" id="about">
+            <div class="brand-symbol">c.</div>
+            <div>
+                <p class="eyebrow">MADE FOR THE TCET CROWD</p>
+                <h2>Your campus.<br>Your <em>uniform.</em></h2>
+            </div>
+            <p>A campus-inspired merch store for the TCET community. Browse the drop, filter hoodies, jackets and tees, add your favourites to the bag, and watch your subtotal update in real time. This is a student project demo; checkout does not collect payment.</p>
+        </section>
+    </main>
+
+    <footer>
+        <a class="logo" href="#">cartify<span>.</span></a>
+        <p>Student project demo · Built with HTML5, CSS3, JS & Java</p>
+        <a class="back-top" href="#shop">Back to top ↑</a>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart">
+        <div class="drawer-heading">
+            <div>
+                <p class="eyebrow">YOUR SELECTION</p>
+                <h2>Your bag <span id="drawer-count">(0)</span></h2>
+            </div>
+            <button class="close-button" id="close-cart" aria-label="Close cart">×</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart">Your bag is waiting for something good.</p>
+        </div>
+        <div class="cart-bottom">
+            <div class="subtotal-row"><span>Subtotal</span><strong id="cart-total">₹0</strong></div>
+            <p class="checkout-note">Demo checkout only — no payment will be collected.</p>
+            <button class="checkout-button" id="checkout-button">Checkout <span>↗</span></button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script src="js/products.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
